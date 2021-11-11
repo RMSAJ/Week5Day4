@@ -22,7 +22,7 @@
                 android:id="@+id/displayNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{@string/score(gameViewModel.currentScore)}"
+                android:text="@{gameViewModel.currentScore.toString()}"
                 android:textStyle="bold"
                 android:textSize="70dp"
                 app:layout_constraintBottom_toBottomOf="parent"
