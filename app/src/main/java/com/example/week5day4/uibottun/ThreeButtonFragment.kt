@@ -28,15 +28,15 @@ private val viewmodel: GameViewModel by viewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         updateScoreOnScreen()
-        binding.add1.setOnClickListener { viewmodel._plusOne()
+        binding.add1.setOnClickListener { viewmodel.plusOne
         updateScoreOnScreen()}
-        binding.sub2.setOnClickListener { viewmodel._minusTwo()
+        binding.sub2.setOnClickListener { viewmodel.minusTwo
         updateScoreOnScreen()}
-        binding.add4.setOnClickListener { viewmodel._plusFour()
+        binding.add4.setOnClickListener { viewmodel.plusfore
         updateScoreOnScreen()}
     }
 
-   private fun updateScoreOnScreen(){
+   private fun updateScoreOnScreen() {
     binding.displayNum.text = getString(R.string.score,viewmodel.currentScore )
 
 

@@ -11,25 +11,25 @@ init {
     _curruntScore = 0
 }
 
- fun _plusOne() {
+ private fun _plusOne() {
 
  ++_curruntScore
 
 }
 
- fun _minusTwo() {
+ private fun _minusTwo() {
 return if (_curruntScore >= 2 ) { _curruntScore -= 2}
         else _curruntScore = 0
 }
 
- fun _plusFour() {
+ private fun _plusFour() {
  _curruntScore += 4
 }
 
 val currentScore get() = _curruntScore
-//val plusOne get() = _plusOne()
-//val minusTwo get() = _minusTwo()
-//val plusfore get() = _plusFour()
+val plusOne get() = _plusOne()
+val minusTwo get() = _minusTwo()
+val plusfore get() = _plusFour()
 
 
 }
