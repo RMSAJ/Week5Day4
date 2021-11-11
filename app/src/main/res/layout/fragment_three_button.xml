@@ -1,63 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+<variable
+    name="gameViewModel"
+    type="com.example.week5day4.uibottun.GameViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".uibottun.ThreeButtonFragment"
-        >
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/displayNum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/score"
-            android:textStyle="bold"
-            android:textSize="70dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.556" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".uibottun.ThreeButtonFragment">
 
-        <Button
-            android:id="@+id/add1"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="+1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/displayNum"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="22dp"
-            />
+            <TextView
+                android:id="@+id/displayNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/score(gameViewModel.currentScore)}"
+                android:textStyle="bold"
+                android:textSize="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.556" />
 
-<Button
-            android:id="@+id/sub2"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="-2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/displayNum"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="150dp"
-            />
+            <Button
+                android:id="@+id/add1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="+1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/displayNum"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="22dp" />
 
-        <Button
-            android:id="@+id/add4"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginStart="288dp"
-            android:text="+4"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/displayNum"
-            app:layout_constraintVertical_bias="0.502" />
+            <Button
+                android:id="@+id/sub2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="-2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/displayNum"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="150dp" />
+
+            <Button
+                android:id="@+id/add4"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="288dp"
+                android:text="+4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/displayNum"
+                app:layout_constraintVertical_bias="0.502" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
